@@ -1,0 +1,106 @@
+.customize-theme {
+  .theme-card {
+    background: var(--background-primary-color);
+    border: 0.2px solid var(--border-color);
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .ant-card-body {
+      padding: 1.5rem;
+    }
+  }
+
+  .theme-option {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &.selected {
+      border-color: var(--text-primary-color-active);
+    }
+
+    img {
+      border-radius: 6px;
+      background-color: var(--bg-app-content);
+    }
+  }
+
+  .color-picker {
+    .color-option {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &.selected {
+        border-color: var(--text-primary-color);
+      }
+    }
+  }
+
+  .layout-option {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--bg-item-selected);
+    }
+
+    &.selected {
+      background: var(--bg-item-selected);
+      border-color: var(--text-primary-color-active);
+    }
+
+    .layout-preview {
+      height: 100px;
+      background: var(--background-primary-color);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+    }
+  }
+}
+
+// Dark mode styles
+[data-theme="dark"] {
+  .customize-theme {
+    .theme-card {
+      background: var(--dark-background);
+      border-color: var(--dark-border);
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .customize-theme {
+    .theme-card {
+      .ant-card-body {
+        padding: 1rem;
+      }
+    }
+  }
+}

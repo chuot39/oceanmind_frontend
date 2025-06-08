@@ -1,0 +1,27 @@
+.friend-dashboard {
+  .friend-tabs {
+    .ant-tabs-nav {
+      margin-bottom: 24px;
+    }
+  }
+
+  .friend-card {
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .ant-card-cover {
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.friend-list-container {
+  .ant-typography {
+    color: var(--text-primary-color);
+  }
+}

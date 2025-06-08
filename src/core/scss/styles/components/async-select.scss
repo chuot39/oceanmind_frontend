@@ -1,0 +1,18 @@
+.async-select {
+  > div {
+    background-color: var(--background-primary-color);
+    // border-color: var(--color-divider);
+    border-radius: 4px;
+    border: 1px solid var(--color-divider);
+    color: var(--text-primary-color);
+
+    // &:hover,
+    // &:focus {
+    //   border-color: var(--primary-color);
+    // }
+  }
+
+  .css-15fndjo-singleValue {
+    color: var(--text-primary-color);
+  }
+}

@@ -1,0 +1,212 @@
+:root {
+  /* ===== Base Colors ===== */
+  --color-white: #ffffff;
+  --color-black: #333333;
+  --color-primary: #00a2ff;
+  --color-primary-light: #dbeafe;
+  --color-primary-dark: #4096ff;
+  --color-secondary: #646464;
+  --color-tertiary: #9e9e9e;
+  --color-success: #52c41a;
+  --color-warning: #faad14;
+  --color-warning-hover: #ff9933;
+  --color-error: #f5222d;
+  --color-error-hover: #ff4d4d;
+  --color-info: #13c2c2;
+
+  /* ===== Base Cyan Color ===== */
+  --color-cyan-background: rgba(0, 188, 212, 0.1); /* Nền nhạt */
+  --color-cyan-100-text: rgba(0, 188, 212, 0.87); /* Văn bản đậm */
+  --color-cyan-200-text: rgba(0, 188, 212, 0.7); /* Văn bản nhạt */
+  --color-cyan-300-text: rgba(0, 188, 212, 0.5); /* Văn bản rất nhạt */
+
+  /* ===== Base Purple Color ===== */
+  --color-purple-background: rgba(211, 173, 247, 0.1); /* Nền nhạt */
+  --color-purple-100-text: rgba(211, 173, 247, 0.87); /* Văn bản đậm */
+  --color-purple-200-text: rgba(211, 173, 247, 0.7); /* Văn bản nhạt */
+  --color-purple-border: #6c399bbe;
+
+  /* ===== Base Layout ===== */
+  --color-background: var(--color-white);
+  --color-background-secondary: #f3f3f3;
+  --color-background-third: #eaeaec;
+  --color-background-tertiary: #eaeaec;
+  --color-background-selected: #9ef7ff;
+  --color-background-hover: #dbeafe;
+
+  --color-text: var(--color-black);
+  --color-text-active: var(--color-primary);
+  --color-text-secondary: var(--color-secondary);
+  --color-text-tertiary: var(--color-tertiary);
+
+  --color-border: #c5c5c5c9;
+  --color-divider: var(--color-border);
+  --color-icon: #f24822;
+  --color-action: #bea6ff;
+  --color-action-hover: #c384ff;
+
+  --color-background-disabled: #596480dc;
+  --color-text-disabled: #e4e6eb;
+  --color-border-disabled: #596480dc;
+
+  /* ===== Components ===== */
+  /* --- Navbar --- */
+  --navbar-background: var(--color-white);
+  --navbar-shadow: linear-gradient(
+    180deg,
+    rgb(231 230 230 / 97%) 44%,
+    rgb(229 229 229 / 82%) 73%,
+    rgb(122 134 169 / 0%)
+  );
+
+  /* --- Login --- */
+  --login-image-background: #e2f6f9;
+  --login-input-background: var(--color-white);
+
+  /* --- Chat --- */
+  --chat-message-background: #b1d7e9a2;
+  --chat-message-sent-background: #c0deff;
+  --chat-message-received-background: #e1effdc7;
+  --chat-message-text: var(--color-text);
+  --chat-message-time: #8c8c8c;
+
+  /* --- Buttons --- */
+  --btn-background: var(--color-primary-light);
+  --btn-background-hover: #d7e8ff8f;
+  --btn-text-hover: #042249;
+  --btn-accept-background: #c0deff;
+  --btn-accept-background-hover: #9dccfd;
+  --btn-reject-background: #fce8e8;
+  --btn-reject-background-hover: #f7bebe;
+  --btn-secondary-background: #e1effdc7;
+  --btn-secondary-background-hover: #d0dff0;
+
+  /* --- Inputs --- */
+  --input-background: #d3f6ffbe;
+  --input-background-focus: #e7fbffbe;
+  --input-border: var(--color-border);
+
+  /* --- Search --- */
+  --search-input-background: var(--color-white);
+  --search-input-border: var(--color-border);
+  --search-input-text: var(--color-text);
+
+  /* --- Switch --- */
+  --switch-text-selected: var(--color-white);
+  --switch-text-selected-hover: #3075d3;
+  --switch-background-selected: var(--color-primary-dark);
+  --switch-background-selected-hover: #3075d3;
+
+  /* --- Tags --- */
+  /* Primary */
+  --tag-primary-text: #1890ff;
+  --tag-primary-background: #e6f4ff;
+  --tag-primary-border: #91caff;
+
+  /* Success */
+  --tag-success-text: var(--color-success);
+  --tag-success-background: #f6ffed;
+  --tag-success-border: #b7eb8f;
+
+  /* Warning */
+  --tag-warning-text: var(--color-warning);
+  --tag-warning-background: #fffbe6;
+  --tag-warning-border: #ffe58f;
+
+  /* Error */
+  --tag-error-text: var(--color-error);
+  --tag-error-background: #fff2f0;
+  --tag-error-border: #ffa39e;
+
+  /* Info */
+  --tag-info-text: var(--color-info);
+  --tag-info-background: #e6f7ff;
+  --tag-info-border: #91d5ff;
+
+  /* Default */
+  --tag-default-text: #999;
+  --tag-default-background: #f5f5f5;
+  --tag-default-border: #d9d9d9;
+
+  /* Processing */
+  --tag-processing-text: #1890ff;
+  --tag-processing-background: #e6f4ff;
+  --tag-processing-border: #91caff;
+
+  /* Purple */
+  --tag-purple-text: var(--color-purple-100-text);
+  --tag-purple-background: var(--color-purple-background);
+  --tag-purple-border: var(--color-purple-border);
+
+  /* --- Dropdown --- */
+  --dropdown-background: #f0f8ff;
+  --dropdown-item-selected: #b8dfff;
+
+  /* --- Card --- */
+  --card-background: #dceeee73;
+  --card-icon-background: rgba(0, 0, 0, 0.04);
+  --card-support-background: linear-gradient(316deg, #fff, #d0f1ff);
+
+  /* --- Tabs --- */
+  --tab-active-background: #189bd8d8;
+
+  /* --- Scrollbar --- */
+  --scrollbar-track: #a3aabb93;
+  --scrollbar-thumb: #6186c5b6;
+  --list-notice-scrollbar-track: #39405234;
+  --list-notice-scrollbar-thumb: #a7abb2;
+
+  /* --- Gradients --- */
+  --text-gradient: linear-gradient(90deg, #36cace, #33156a);
+
+  /* ===== Legacy Variable Mapping (for compatibility) ===== */
+  --background-primary-color: var(--color-background);
+  --text-primary-color: var(--color-text);
+  --text-primary-color-active: var(--color-text-active);
+  --third-color: var(--color-text-tertiary);
+  --secondary-color: var(--color-text-secondary);
+  --icon-color: var(--color-icon);
+  --border-color: var(--color-border);
+  --navbar-color: var(--navbar-background);
+  --bg-app-content: var(--color-background-secondary);
+  --login-image: var(--login-image-background);
+  --login-input: var(--login-input-background);
+  --table-header-bg: var(--color-background-tertiary);
+  --bg-item-selected: var(--color-background-selected);
+  --bg-list-notice-hover: var(--color-background-hover);
+  --bg-chat-message: var(--chat-message-background);
+  --bg-message-sent: var(--chat-message-sent-background);
+  --bg-message-received: var(--chat-message-received-background);
+  --text-message: var(--chat-message-text);
+  --text-message-time: var(--chat-message-time);
+  --webkit-scrollbar-track: var(--scrollbar-track);
+  --webkit-scrollbar-thumb: var(--scrollbar-thumb);
+  --list_notice-scrollbar-track: var(--list-notice-scrollbar-track);
+  --list_notice-scrollbar-thumb: var(--list-notice-scrollbar-thumb);
+  --btn-bg-color: var(--btn-background);
+  --btn-text-hover-color: var(--btn-text-hover);
+  --btn-custom-accept: var(--btn-accept-background);
+  --btn-custom-reject: var(--btn-reject-background);
+  --btn-custom-accept-hover: var(--btn-accept-background-hover);
+  --btn-custom-reject-hover: var(--btn-reject-background-hover);
+  --btn-custom-secondary: var(--btn-secondary-background);
+  --btn-custom-secondary-hover: var(--btn-secondary-background-hover);
+  --search-input-bg: var(--search-input-background);
+  --search-input-border: var(--search-input-border);
+  --search-input-text: var(--search-input-text);
+  --switch-text-selected: var(--switch-text-selected);
+  --switch-text-selected-hover: var(--switch-text-selected-hover);
+  --switch-bg-selected: var(--switch-background-selected);
+  --switch-bg-selected-hover: var(--switch-background-selected-hover);
+  --input-bg: var(--input-background);
+  --input-border: var(--input-border);
+  --input-bg-focus: var(--input-background-focus);
+  --bg-dropdown-color: var(--dropdown-background);
+  --bg-dropdown-selected-item: var(--dropdown-item-selected);
+  --bg-card-color: var(--card-background);
+  --bg-icon-color: var(--card-icon-background);
+  --tab-active-bg: var(--tab-active-background);
+  --bg-text-linear: var(--text-gradient);
+  --bg-header-navbar-shadow: var(--navbar-shadow);
+  --bg-card-support: var(--card-support-background);
+}

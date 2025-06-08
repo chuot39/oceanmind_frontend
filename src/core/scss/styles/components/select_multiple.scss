@@ -1,0 +1,12 @@
+.ant-select-selection-overflow-item {
+  .ant-select-selection-item {
+    background-color: var(--third-color) !important;
+
+    .ant-select-selection-item-remove {
+      color: #f5222d !important;
+      font-weight: bold !important;
+      font-size: 11px !important;
+      padding-left: 3x;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.notification_page {
+  .list_notification {
+    background-color: var(--background-primary-color) !important;
+    &:hover {
+      background-color: var(--bg-list-notice-hover) !important;
+    }
+  }
+}

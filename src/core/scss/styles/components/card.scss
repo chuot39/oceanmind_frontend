@@ -1,0 +1,54 @@
+.ant-card,
+.ant-card-body {
+  background-color: var(--background-primary-color);
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 8px !important;
+}
+
+.card_disabled_box_shadow {
+  .ant-card-body {
+    box-shadow: none !important;
+  }
+}
+
+.ant-card {
+  .ant-card-head {
+    margin-bottom: 0px !important;
+    color: var(--text-primary-color);
+  }
+
+  .ant-card-body {
+    color: var(--text-primary-color);
+
+    .ant-card-meta {
+      .ant-card-meta-detail {
+        .ant-card-meta-title {
+          font-size: 16px;
+          font-weight: 600;
+          color: var(--text-primary-color);
+        }
+
+        .ant-card-meta-description {
+          font-size: 14px;
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+
+  .ant-card-actions {
+    background-color: var(--background-primary-color);
+    border-top: 1px solid var(--border-color);
+
+    .ant-btn {
+      color: var(--text-primary-color);
+      border-color: var(--border-color);
+
+      &:hover {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+    }
+  }
+}

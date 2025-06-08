@@ -1,0 +1,178 @@
+.task-dashboard {
+  .ant-card-body {
+    height: calc(100vh - 180px);
+    padding: 1rem;
+  }
+
+  // Sidebar styles
+  .task-sidebar {
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--webkit-scrollbar-track);
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--webkit-scrollbar-thumb);
+      border-radius: 4px;
+    }
+    .ant-menu {
+      background: transparent;
+
+      .ant-menu-item {
+        color: var(--text-primary-color);
+        margin: 4px 0;
+        border-radius: 6px;
+
+        &:hover {
+          background-color: var(--bg-list-notice-hover);
+          color: var(--text-primary-color);
+        }
+
+        &.ant-menu-item-selected {
+          background-color: var(--bg-item-selected);
+          color: var(--text-primary-color);
+        }
+
+        .anticon {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  // Task list styles
+  .task-list-container {
+    height: 100%;
+    overflow-y: auto;
+
+    .task-list-header {
+      background-color: var(--background-primary-color);
+
+      .search_task {
+        .ant-input-wrapper {
+          display: flex;
+          align-items: center;
+          height: 100%;
+
+          .ant-input-affix-wrapper {
+            border: none;
+            height: 100%;
+            background-color: var(--background-primary-color);
+            color: var(--text-primary-color);
+            // Add these new styles
+            .ant-input-prefix {
+              margin-right: 12px; // Add space between icon and text
+              color: var(--secondary-color); // Optional: style the icon color
+            }
+
+            .ant-input {
+              padding-left: 4px; // Add padding to the input text
+              &::placeholder {
+                padding-left: 4px; // Add padding to the placeholder text
+                color: var(
+                  --secondary-color
+                ); // Optional: style placeholder color
+              }
+            }
+          }
+        }
+        .ant-input-group-addon {
+          display: none;
+        }
+      }
+    }
+
+    .task-item {
+      border-bottom: 1px solid var(--color-divider);
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: var(--bg-list-notice-hover);
+      }
+
+      .status-icon {
+        font-size: 1.2rem;
+        // color: var(--text-primary-color);
+      }
+
+      .task-title {
+        color: var(--text-primary-color);
+      }
+
+      .task-date {
+        color: var(--secondary-color);
+        font-size: 0.875rem;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--webkit-scrollbar-track);
+      border-radius: 4px;
+      margin-top: 44px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--webkit-scrollbar-thumb);
+      border-radius: 4px;
+    }
+  }
+
+  // Add task button
+  .add-task-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    .anticon {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Drawer styles
+// .task_drawer {
+//   background-color: var(--background-primary-color) !important;
+//   color: var(--text-primary-color) !important;
+//   .ant-drawer-header {
+//     border-bottom: 1px solid var(--color-divider);
+//     background-color: var(--background-primary-color);
+
+//     .ant-drawer-close {
+//       color: var(--text-primary-color);
+//     }
+//   }
+
+//   .ant-drawer-body {
+//     padding: 1rem;
+//   }
+
+//   .ant-form-item-label {
+//     label {
+//       color: var(--text-primary-color);
+//     }
+//   }
+
+//   .ant-input,
+//   .ant-select-selector,
+//   .ant-picker {
+//     background-color: var(--background-primary-color);
+//     border-color: var(--color-divider);
+//     color: var(--text-primary-color);
+
+//     &:hover,
+//     &:focus {
+//       border-color: var(--primary-color);
+//     }
+//   }
+// }

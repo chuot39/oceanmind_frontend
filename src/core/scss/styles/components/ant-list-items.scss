@@ -1,0 +1,9 @@
+.ant-list-items {
+  .ant-list-item {
+    border-block-end: 1px solid var(--color-divider);
+
+    &:last-child {
+      border-block-end: none;
+    }
+  }
+}

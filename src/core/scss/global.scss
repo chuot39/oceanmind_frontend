@@ -1,0 +1,15 @@
+body {
+  background-color: var(--background-primary-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: var(--navbar-color);
+}
+
+.ant-dropdown {
+  max-width: 280px !important;
+}

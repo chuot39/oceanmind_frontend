@@ -1,0 +1,48 @@
+.ant-drawer {
+  .ant-drawer-content-wrapper {
+    .ant-drawer-content {
+      background-color: var(--background-primary-color) !important;
+      color: var(--text-primary-color) !important;
+      .ant-drawer-header {
+        border-bottom: 1px solid var(--color-divider);
+        background-color: var(--background-primary-color);
+
+        .ant-drawer-close {
+          color: var(--text-primary-color);
+        }
+      }
+
+      .ant-drawer-body {
+        padding: 1rem;
+      }
+
+      .ant-form-item-label {
+        label {
+          color: var(--text-primary-color);
+        }
+      }
+
+      .ant-input,
+      .ant-input-number-input,
+      .ant-select-selector,
+      .ant-picker {
+        background-color: var(--background-primary-color);
+        border-color: var(--color-divider);
+        color: var(--text-primary-color);
+
+        .ant-picker-input {
+          input {
+            &::placeholder {
+              color: var(--secondary-color) !important;
+            }
+          }
+        }
+
+        &:hover,
+        &:focus {
+          border-color: var(--primary-color);
+        }
+      }
+    }
+  }
+}

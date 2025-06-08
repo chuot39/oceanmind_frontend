@@ -1,0 +1,96 @@
+.account-settings {
+  .info-section {
+    background: var(--background-primary-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 3rem;
+
+    .section-title {
+      color: var(--text-primary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .ant-form-item-label > label {
+      color: var(--text-primary-color);
+    }
+
+    .ant-input,
+    .ant-input-affix-wrapper {
+      background: var(--input-bg);
+      border-color: var(--input-border);
+      color: var(--text-primary-color);
+
+      &:hover,
+      &:focus {
+        background: var(--input-bg-focus);
+        border-color: var(--text-primary-color-active);
+      }
+    }
+  }
+
+  .delete-account {
+    background: var(--background-primary-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+
+    .warning-box {
+      background: rgba(255, 77, 79, 0.1);
+      border: 1px solid #ff4d4f;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      .title {
+        color: #ff4d4f;
+        font-weight: 600;
+      }
+
+      .description {
+        color: var(--text-primary-color);
+        margin-top: 0.5rem;
+      }
+    }
+
+    .confirm-checkbox {
+      margin: 1rem 0;
+
+      .ant-checkbox-wrapper {
+        color: var(--text-primary-color);
+      }
+    }
+
+    .delete-btn {
+      background: #ff4d4f;
+      border-color: #ff4d4f;
+
+      &:hover {
+        background: #ff7875;
+        border-color: #ff7875;
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .account-settings {
+    .upload-section {
+      .banner-upload {
+        height: 150px;
+      }
+
+      .avatar-upload {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .info-section,
+    .delete-account {
+      padding: 1rem;
+    }
+  }
+}

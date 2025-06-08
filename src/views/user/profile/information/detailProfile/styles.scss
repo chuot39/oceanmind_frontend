@@ -1,0 +1,124 @@
+.profile-detail-page {
+  .profile-header {
+    margin-bottom: 24px;
+
+    .cover-image {
+      transition: all 0.3s ease;
+
+      &:hover {
+        filter: brightness(0.95);
+      }
+    }
+
+    .avatar-container {
+      .ant-avatar {
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .profile-tabs {
+    .ant-tabs-nav {
+      margin-bottom: 24px;
+    }
+  }
+
+  .about-section {
+    .ant-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+      .ant-card-head {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .ant-tag {
+        margin-bottom: 8px;
+        border-radius: 4px;
+      }
+    }
+
+    .education-item,
+    .experience-item {
+      margin-bottom: 8px;
+    }
+  }
+
+  .projects-section {
+    .ant-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .posts-section {
+    .post-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+      img {
+        transition: all 0.3s ease;
+
+        &:hover {
+          opacity: 0.95;
+        }
+      }
+    }
+  }
+
+  .achievements-section {
+    .achievements-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+      .achievement-item {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .profile-header {
+      .profile-info {
+        padding: 16px;
+
+        .avatar-container {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .ml-36 {
+          margin-left: 0;
+          margin-top: 60px;
+          text-align: center;
+        }
+
+        .flex {
+          justify-content: center;
+        }
+
+        .absolute.top-6.right-6 {
+          position: static;
+          margin-top: 16px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

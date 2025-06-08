@@ -1,0 +1,140 @@
+.love-item-page {
+  .mark-tabs {
+    .ant-tabs-nav {
+      margin-bottom: 24px;
+
+      .ant-tabs-tab {
+        font-size: 16px;
+        padding: 12px 0;
+
+        &.ant-tabs-tab-active {
+          .ant-tabs-tab-btn {
+            color: var(--text-primary-color-active);
+          }
+        }
+      }
+
+      .ant-tabs-ink-bar {
+        background: var(--text-primary-color-active);
+      }
+    }
+  }
+
+  .mark-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 var(--bg-card-color);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .ant-card-cover {
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
+    }
+
+    .ant-card-body {
+      padding: 16px;
+    }
+  }
+
+  .mark-list-item {
+    transition: all 0.3s ease;
+
+    .ant-card-body {
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+
+  .view-mode-toggle {
+    .ant-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+
+      svg {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .filter_drawer {
+    .ant-drawer-header {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .ant-drawer-body {
+      padding: 24px;
+    }
+
+    .ant-form-item {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .ant-select,
+    .ant-picker {
+      width: 100%;
+    }
+  }
+
+  // Dark mode specific styles
+  &[data-theme="dark"] {
+    .mark-card,
+    .mark-list-item {
+      background: var(--background-primary-color);
+      border-color: var(--border-color);
+    }
+
+    .ant-tabs-tab {
+      color: var(--text-primary-color);
+    }
+
+    .ant-input-search {
+      background: var(--input-bg);
+      border-color: var(--input-border);
+
+      &:focus,
+      &:hover {
+        background: var(--input-bg-focus);
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .love-item-page {
+    .mark-tabs {
+      .ant-tabs-nav {
+        .ant-tabs-tab {
+          font-size: 14px;
+          padding: 8px 0;
+        }
+      }
+    }
+
+    .mark-list-item {
+      .actions {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  }
+}

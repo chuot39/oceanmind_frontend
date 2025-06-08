@@ -1,0 +1,91 @@
+//OPTION 1
+.btn_custom_accept {
+  background-color: var(--btn-custom-accept);
+  color: var(--text-primary-color);
+  &:hover {
+    color: var(--text-primary-color) !important;
+    background-color: var(--btn-custom-accept-hover) !important;
+  }
+}
+
+.btn_first {
+  background-color: var(--btn-custom-accept);
+  color: var(--text-primary-color);
+  &:hover {
+    color: var(--text-primary-color) !important;
+    background-color: var(--btn-custom-accept-hover) !important;
+  }
+}
+
+.btn_secondary {
+  background-color: var(--btn-custom-accept);
+  color: var(--text-primary-color);
+  &:hover {
+    color: var(--text-primary-color) !important;
+    background-color: var(--btn-custom-accept-hover) !important;
+  }
+}
+
+.ant-btn-variant-solid:disabled {
+  background-color: var(--color-background-disabled) !important;
+  color: var(--color-text-disabled) !important;
+  border-color: var(--color-border-disabled) !important;
+}
+//OPTION 2
+// .btn_custom_accept {
+//   //light
+//   background-color: #3293fc !important;
+//   color: #ffffff !important;
+//   border: none !important;
+//   padding: 10px 20px !important;
+//   border-radius: 5px !important;
+//   cursor: pointer !important;
+//   transition: background-color 0.3s !important;
+
+//   &:hover {
+//     background-color: #2a7bca !important; //LIGHT //DARK
+//   }
+
+// //dark
+// background-color: #1f3a8a !important;
+// color: #ffffff !important;
+// border: none !important;
+// padding: 10px 20px !important;
+// border-radius: 5px !important;
+// cursor: pointer !important;
+// transition: background-color 0.3s !important;
+// }
+
+//OPTION 3
+// .btn_custom_accept {
+//   background-color: #3293fc;
+//   color: #ffffff;
+//   border: none;
+//   padding: 10px 20px;
+//   border-radius: 8px;
+//   cursor: pointer;
+//   transition: background-color 0.3s;
+//   &:hover {
+//     background-color: #2672d9; //LIGHT
+//     background-color: #3293fc; //DARK
+//     color: #ffffff;
+//   }
+
+//   //dark
+//   background-color: #2672d9;
+//   color: #ffffff;
+//   border: none;
+//   padding: 10px 20px;
+//   border-radius: 8px;
+//   cursor: pointer;
+//   transition: background-color 0.3s;
+// }
+
+.btn_custom_reject {
+  background-color: var(--btn-custom-reject);
+  color: var(--text-primary-color);
+  &:hover {
+    color: var(--text-primary-color) !important;
+    background-color: var(--btn-custom-reject-hover) !important;
+  }
+}

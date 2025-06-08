@@ -1,0 +1,123 @@
+.security-settings {
+  .security-card {
+    background: var(--background-primary-color);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .ant-card-body {
+      padding: 1.5rem;
+    }
+  }
+
+  .ant-timeline {
+    .ant-timeline-item {
+      padding-bottom: 1.5rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      .ant-timeline-item-head {
+        background: var(--background-primary-color);
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .ant-steps {
+    .ant-steps-item-icon {
+      background: var(--background-primary-color);
+      border-color: var(--border-color);
+    }
+
+    .ant-steps-item-active {
+      .ant-steps-item-icon {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+    }
+
+    .ant-steps-item-finish {
+      .ant-steps-item-icon {
+        background: var(--success-color);
+        border-color: var(--success-color);
+      }
+    }
+  }
+
+  .ant-modal {
+    .ant-modal-content {
+      background: var(--background-primary-color);
+    }
+
+    .ant-modal-header {
+      background: var(--background-primary-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .ant-modal-footer {
+      border-top: 1px solid var(--border-color);
+    }
+  }
+
+  .ant-form {
+    .ant-form-item-label > label {
+      color: var(--text-primary-color);
+    }
+
+    .ant-input-password {
+      background: var(--input-bg);
+      border-color: var(--input-border);
+
+      &:hover,
+      &:focus {
+        border-color: var(--primary-color);
+      }
+    }
+  }
+}
+
+// Dark mode styles
+.dark {
+  .security-settings {
+    .security-card {
+      background: var(--dark-background);
+      border-color: var(--dark-border);
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .ant-timeline-item-head {
+      background: var(--dark-background) !important;
+    }
+
+    .ant-steps-item-icon {
+      background: var(--dark-background) !important;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .security-settings {
+    .security-card {
+      .ant-card-body {
+        padding: 1rem;
+      }
+    }
+
+    .ant-timeline {
+      .ant-timeline-item {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}

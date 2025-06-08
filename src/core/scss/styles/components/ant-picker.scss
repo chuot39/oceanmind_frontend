@@ -1,0 +1,19 @@
+.ant-picker {
+  background-color: var(--background-primary-color);
+  border-color: var(--color-divider);
+  color: var(--text-primary-color);
+
+  .ant-picker-input {
+    input {
+      &::placeholder {
+        color: var(--secondary-color) !important;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--primary-color);
+    background-color: var(--background-primary-color);
+  }
+}

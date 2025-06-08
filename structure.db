@@ -1,0 +1,722 @@
+// 1. Vai tro (DONE)
+Table roles {
+  id integer [primary key, increment]
+  role_name varchar(50) [unique, not null]
+  description varchar(255) [note: "Optional"]
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+// 2. Gioi tinh (DONE)
+Table genders {
+  id integer [primary key, increment]
+  name_vi varchar(50) [unique, not null]
+  name_en varchar(50) [unique, not null]
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+// 3. Khoa (DONE)
+Table faculties {
+  id integer [primary key, increment]
+  name_vi varchar(50) [unique]
+  name_en varchar(50) [unique]
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+// 4. Khoa hoc (DONE)
+Table batches {
+  id integer [primary key, increment]
+  name varchar(10) [unique, not null]
+  start_year date [not null]
+  end_year date [not null]
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+// 5. Nghe Nghiep (DONE)
+Table careers {
+  id integer [primary key, increment]
+  name varchar(50) [not null]
+  description text [note: "Optional"]
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//6. Mang xa hoi (DONE) - icon-url
+Table socials {
+  id integer [primary key, increment] 
+  platform varchar(50) [not null]
+  icon_url varchar (255) [not null]
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//7. Tag cua cac bai post (DONE)
+Table tags {
+  id integer [primary key, increment]
+  name_vi varchar(50) [not null]
+  name_en varchar(50) [not null]
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//8. The loai cua Post (public, group, private)
+// Table post_types {
+//   id integer [primary key, increment]
+//   name varchar(50) [not null]
+//   description varchar(255) [null]
+
+//   created_at timestamp
+//   updated_at timestamp
+//   deleted_at timestamp
+// }
+
+//9. The loai cua Group 
+// Table group_types {
+//   id integer [primary key, increment]
+//   name varchar [not null, unique]
+//   description text [null]
+  
+//   created_at timestamp
+//   updated_at timestamp
+//   deleted_at timestamp
+// }
+
+
+//9. The loai cua Task (DONE)
+Table task_categories {
+  id integer [primary key, increment]  
+  name_vi varchar(255) [not null]
+  name_en varchar(255) [not null]
+  task_priority integer [not null]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//10. The Loai mon hoc (DONE)
+Table category_subjects {
+  id integer [primary key, increment]
+  name_vi varchar(255) [not null]
+  name_en varchar(255) [not null]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//11. Loai thong bao (DONE)
+Table notice_types {
+  id integer [primary key, increment] // ID loại thông báo
+  name_vi varchar(50) [not null]
+  name_en varchar(50) [not null]
+  description_vi text [default: null] 
+  description_en text [default: null] 
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//12. Loai ho tro (DONE)
+Table category_supports {
+  id integer [primary key, increment]
+  name_vi varchar(50) [not null]
+  name_en varchar(50) [not null]
+  description_vi text [default: null] 
+  description_en text [default: null] 
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//13. Cac file media (DONE)
+Table media_files {
+  id integer [primary key, increment]
+  file_path varchar(255) [not null]        
+  file_type varchar(50) [not null]         
+  file_size double [not null]         
+       
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//14. Chuyen Nganh (DONE)
+Table specializeds {
+  id integer [primary key, increment]
+  name_vi varchar(100) [not null]
+  name_en varchar(100) [not null]
+  description_vi text [default: null] 
+  description_en text [default: null] 
+
+  faculty_id integer [ref :> faculties.id, not null] 
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//15. Lop (DONE)
+Table classes {
+  id integer [primary key, increment]
+  name varchar(100) [not null]
+  description text [null]
+
+  specialized_id integer [ref :> specializeds.id, not null] 
+  batche_id integer [ref :> batches.id, not null]
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//16. Thong tin nguoi dung (DONE)
+Table users {
+  id integer [primary key, increment]
+  fullname varchar(50) [not null]
+  username varchar(50) [not null]
+  nickname varchar(50) [null]
+  password varchar(255) [not null]
+  student_code varchar(50) [unique, null]
+  date_of_birth date [null]
+  email varchar [unique, null]
+  phone varchar [unique, null]
+  biography text [null]
+  address text [null] 
+  isOnline boolean [not null, default: 0]
+  last_active_at timestamp [not null]
+
+  avatar_url_id integer [ref :> media_files.id, not null]
+  banner_url_id integer [ref :> media_files.id, not null]
+  role_id integer [ref :> roles.id, not null]
+  gender_id integer [ref :> genders.id, null]
+  career_id integer [ref :> careers.id, null]
+  regular_class_id integer [ref :> classes.id, not null]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//17. Tai khoan mang xa hoi cua nguoi dung  (DONE)
+Table user_socials {
+  id integer [primary key, increment] 
+  account_url varchar(255)
+
+  user_id integer [ref: > users.id, not null]    
+  social_id integer [ref: > socials.id, not null] 
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//18. Bang nhom  (DONE)
+TABLE groups {
+  id integer [primary key, increment]
+  name varchar(50) [not null]
+  description text [null]
+  privacy text [null]
+  isPublic boolean [not null]
+
+  cover_img_id integer [not null, ref: > media_files.id]
+  group_created_by integer [not null, ref: > users.id]
+  // group_type_id integer [not null, ref: > group_types.id]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+
+//19. Bai post  (DONE)
+Table posts {
+  id integer [primary key, increment]
+  content text [not null]
+  isPublic boolean
+
+  post_created_by integer [not null, ref: > users.id]
+  group_id integer [null, ref: > groups.id]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//20. Cac Tag duoc gan trong post  (DONE)
+Table post_medias {
+  post_id integer [not null, ref: > posts.id]
+  media_id integer [not null, ref: > media_files.id]
+
+  indexes {
+    (post_id, media_id) [unique]
+  }
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//21. Cac Tag duoc gan trong post  (DONE)
+Table post_tags {
+  post_id integer [null, ref: > posts.id]
+  document_share_id integer [null, ref: > document_shares.id]
+  tag_id integer [not null, ref: > tags.id]
+
+  indexes {
+    (post_id, tag_id) [unique]
+  }
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+
+//22. Bang thanh vien nhom (DONE)
+TABLE group_members {
+  id integer [primary key, increment]
+
+  role_id integer [ref :> roles.id, not null]
+  user_id integer  [ref: > users.id, not null]
+  group_id integer  [ref: > groups.id, not null]
+
+  indexes {
+    (group_id, user_id) [unique] 
+  }
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//23. Bang yeu cau tham gia nhom  (DONE)
+Table group_requests {
+  id integer [primary key, increment]
+  request_status varchar(50) [default: 'pending']
+
+  group_id integer [ref: > groups.id, not null]
+  user_request integer [ref: > users.id, not null] 
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//24. Bang loi moi tham gia nhom (DONE)
+Table group_invitations {
+  id integer [primary key, increment] // ID lời mời
+  invitation_status varchar(50) [default: 'pending'] // Trạng thái: pending, accepted, rejected
+  responded_at timestamp [default: null] // Thời gian phản hồi
+
+  group_id integer [ref: > groups.id, not null] // ID nhóm
+  invited_by integer [ref: > users.id, not null] // Người gửi lời mời
+  invited_to integer [ref: > users.id, not null] // Người được mời
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+
+//25. Bang action yeu thich (DONE)
+TABLE likes {
+  id integer [primary key, increment]
+  user_id integer  [ref: > users.id, not null]
+  post_id integer  [ref: > posts.id, not null]
+
+  indexes {
+    (user_id, post_id) [unique] // Mỗi người chỉ có thể thích một bài đăng duy nhất
+  }
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//26. Bang binh luan cac bai viet (DONE)
+TABLE comments {
+  id integer [primary key, increment]
+  content text
+  
+  user_id integer  [ref: > users.id, not null]
+  post_id integer  [ref: > posts.id, not null]
+  parent_id integer  [ref: > comments.id, null]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//27. Bang thong tin da chia se (DONE)
+TABLE shares {
+  id integer [primary key, increment]
+
+  post_id integer  [ref: > posts.id, not null]
+  user_id integer  [ref: > users.id, not null]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//28. Bang luu ten cac cuoc tro truyen (DONE)
+Table conversations {
+  id int [primary key, increment] 
+  name varchar (50) [null]
+  is_group_chat  boolean [not null]
+
+  conversation_created_by  int [ref: > users.id, not null]
+  user_chated_with  int [ref: > users.id, null]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//29. Bang luu thong tin member tham gia nhom chat (DONE)
+Table participants {
+  id int [pk, increment] // ID duy nhất
+  isAdmin boolean
+
+  conversation_id int [ref: > conversations.id, not null]
+  user_id int [ref: > users.id, not null]
+   
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//30. Bang luu cac doan tin nhan (DONE) 
+Table messages {
+  id int [pk, increment]
+  content text
+
+  conversation_id int [ref: > conversations.id, not null] 
+  sender_id int [ref: > users.id, not null]
+  media_id int [ref: > media_files.id, null]
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//31. Trang thai cua tin nhan (DONE)
+Table message_statuses {
+  id             int [pk, increment] // ID duy nhất
+  is_read        boolean [default: false] // Tin nhắn đã đọc chưa
+  is_delivered   boolean [default: false] // Tin nhắn đã nhận chưa
+ 
+  message_id     int [ref: > messages.id, not null] // ID tin nhắn
+  receiver_user_id int [ref: > users.id, not null]    // ID người dùng
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//32. Bang nhiem vu 
+Table tasks {
+  id integer [primary key, increment]
+  name varchar(255) [not null]
+  due_date date [null]
+  description text [null]
+
+  task_category_id integer [ref: > task_categories.id, not null]
+  project_id integer [ref: > projects.id, null]    // Liên kết với bài tập nhóm
+  task_created_by integer [ref: > users.id, null]   
+
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//33. Bang nhiem vu cua ng dung 
+TABLE user_tasks {
+  id integer [primary key, increment]  
+  is_important boolean [null]
+  user_id integer [ref: > users.id, not null]   
+  task_id integer [ref: > tasks.id, not null]   
+  task_completed_on  date [null]
+
+  indexes {
+    (user_id, task_id) [unique]  
+  }
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+
+}
+
+//34. Bang Su kien 
+table events {
+  id integer [primary key, increment]
+  name varchar(255)
+  start_date date
+  due_date date
+  description text
+  location varchar(255)
+
+  banner_id integer [ref: > media_files.id]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//35. Bang mon hk hk truoc 
+Table previous_subjects {
+  id integer [primary key, increment] // ID của bản ghi
+  subject_id integer [ref: > subjects.id, not null] // Môn học chính
+  previous_subject_id integer [ref: > subjects.id, not null] // Môn học trước
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//36. Bang mon hoc tien quyet 
+Table prerequisites_subjects {
+  id integer [primary key, increment] // ID của bản ghi
+  
+  subject_id integer [ref: > subjects.id, not null] // Môn học chính
+  prerequisite_subject_id integer [ref: > subjects.id, not null] // Môn tiên quyết
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//37. Bang mon hoc 
+Table subjects {
+  id integer [primary key, increment]
+  subject_code varchar(50)
+  name varchar(100)
+  credits integer //Tin Chi
+  semester integer //Hoc ky
+  
+  category_subject_id integer [ref: > category_subjects.id, not null]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//38. Bang diem sinh vien 
+Table student_subject_scores {
+  id integer [primary key, increment] // ID của bản ghi
+  student_id integer [ref: > users.id, not null] // ID của sinh viên
+  subject_id integer [ref: > subjects.id, not null] // ID của môn học
+  score float [not null] // Điểm số của môn học (có thể dùng thang điểm 10, 4 hoặc 100)
+  semester integer [not null] // Học kỳ sinh viên học môn này
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//39. Bang bai tap lon, du an 
+Table projects {
+  id integer [primary key, increment]
+  name varchar(100) [not null]
+  description text [not null]
+  document_url varchar(200) [null]
+  project_url varchar(200) [null]
+  due_date date [null]
+
+  subject_id integer [ref: > subjects.id, not null] // ID của môn học
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//40. Bang member cua mot du an
+Table project_members {
+  id integer [primary key, increment]
+  is_leader boolean [default: false]          // Kiểm tra người tham gia có phải nhóm trưởng không
+  
+  project_id integer [ref: > projects.id, not null]    // Liên kết với bài tập nhóm
+  user_id integer [ref: > users.id, not null]           // Liên kết với người tham gia
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//41. Bang danh dau cac bai post yeu thich 
+Table mark_posts {
+  id integer [primary key, increment]
+  
+  document_share_id integer [ref: > document_shares.id,  null]
+  post_id integer [ref: > posts.id,  null]
+  user_id integer [ref: > users.id, not null]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//42. Bang thong bao 
+Table notifications {
+  id integer [primary key, increment] // ID thông báo
+  title varchar(50) [not null] // Tiêu đề thông báo
+  content text [not null] // Nội dung chi tiết
+  link varchar(255) [not null] 
+  is_global boolean [default: false] // Đánh dấu thông báo áp dụng cho tất cả user
+  
+  notice_type_id integer [ref: > notice_types.id, not null] // Loại thông báo, liên kết với bảng notice_types
+  notification_created_by integer [ref: > users.id, not null] // Loại thông báo, liên kết với bảng notice_types
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//43. Bang thong bao cho tung user
+Table user_notifications {
+  id integer [primary key, increment] // ID trạng thái thông báo
+  is_read boolean [default: false] // Đánh dấu đã đọc
+  read_at timestamp [default: null] // Thời gian đọc
+  
+  user_id integer [ref: > users.id, not null] // Người dùng nhận thông báo
+  notification_id integer [ref: > notifications.id, not null] // ID thông báo
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//44. Bang cai dat cho cac loai thong bao 
+Table notification_settings {
+  id integer [primary key, increment] // ID cài đặt
+  is_enabled boolean [default: true] // Bật/tắt loại thông báo
+  
+  user_id integer [ref: > users.id, not null] // Người dùng
+  group_id integer [ref: > groups.id, null] 
+  notice_type_id integer [ref: > notice_types.id, not null] // Loại thông báo, liên kết với bảng notice_types
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//45. Bang cau hoi
+Table faqs {
+  id integer [primary key, increment]
+  question text [not null]            // Nội dung câu hỏi
+  answer text [not null]              // Nội dung câu trả lời
+    
+  category_id integer [ref: > category_supports.id, not null]
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//46. Bang huong dan 
+Table guides {
+  id integer [primary key, increment]
+  title varchar(255) [not null]         // Tiêu đề của hướng dẫn
+  content text [not null]                // Nội dung hướng dẫn
+   
+  category_id integer [ref: > category_supports.id, not null]    
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//47. Bang ban be 
+Table friendships {
+  id int [pk, increment, unique] // ID mối quan hệ
+  user_id int [ref: > users.id, not null]  // ID người dùng 1
+  friend_id int [ref: > users.id, not null]  // ID người dùng 2
+  status varchar [default: 'pending', note: 'Trạng thái quan hệ: pending, accepted, blocked'] // Trạng thái quan hệ
+
+  Indexes {
+    (user_id, friend_id) [unique] // Đảm bảo không có quan hệ trùng lặp
+  }
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+//48. Bang Documents
+Table document_shares {
+  id integer [primary key, increment] // ID thông báo
+  title varchar(50) [not null] // Tiêu đề thông báo
+  description text [not null] // Nội dung chi tiết
+  content text [not null] // Nội dung chi tiết
+  thumbnail varchar(255) [not null] 
+  is_global boolean [default: false] // Đánh dấu thông báo áp dụng cho tất cả user
+  link_document text [ not null]
+  
+  author integer [ref: > users.id, not null] 
+  
+  created_at timestamp
+  updated_at timestamp
+  deleted_at timestamp
+}
+
+
+
+
+
+// ManyToOne: 
+//Ref: tableB.id > tableA.foreign_key // Một bản ghi từ tableB được nhiều bản ghi từ tableA tham chiếu đến
+
+//OneToMany
+//Ref: tableA.id < tableB.foreign_key // Một bản ghi từ tableA có thể có nhiều bản ghi từ tableB
+
+// OneToOne
+//Ref: tableA.id - tableB.foreign_key // Một bản ghi từ tableA liên kết duy nhất với một bản ghi từ tableB
+
+//Many-to-Many 
+// Ref: tableA.id < junction_table.foreign_key_a
+// Ref: tableB.id < junction_table.foreign_key_b
+// Table post_tags {
+//   post_id integer [ref: > posts.id]   // Liên kết tới bảng posts
+//   tag_id integer [ref: > tags.id]     // Liên kết tới bảng tags
+// }
+
+// Ref: posts.id < post_tags.post_id // Một post có nhiều tags
+// Ref: tags.id < post_tags.tag_id   // Một tag có thể được gắn vào nhiều posts
+
+
+//Self-Referencing 
+// Ref: table.id < table.parent_id // Một bản ghi trong bảng có thể liên kết đến bản ghi khác trong cùng bảng
+// Table categories {
+//   id integer [primary key, increment]
+//   name varchar
+//   parent_id integer [ref: > categories.id] // Tham chiếu đến chính bảng categories
+// }
+
+// One-to-Many	Ref: tableA.id < tableB.foreign_key	users.id < posts.user_id
+// Many-to-One	Ref: tableB.id > tableA.foreign_key	posts.user_id > users.id
+// One-to-One	Ref: tableA.id - tableB.foreign_key	users.id - profiles.user_id
+// Many-to-Many	Dùng bảng trung gian, Ref: tableA.id < junction_table.foreign_key_a	posts.id < post_tags.post_id
+// Self-Referencing	Ref: table.id < table.parent_id	categories.id < categories.parent_id
+// Cascade Rules	Ref: tableA.id < tableB.foreign_key [delete: cascade]	users.id < posts.user_id [delete: cascade]
+// Composite Key	Ref: (tableA.col1, tableA.col2) < tableB.(key1, key2)	(customers.id, products.id) < orders.(cust_id, prod_id)
+

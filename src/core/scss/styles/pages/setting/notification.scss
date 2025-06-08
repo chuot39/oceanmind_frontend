@@ -1,0 +1,58 @@
+.notification-settings {
+  .notification-card {
+    background: var(--background-primary-color);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .ant-card-body {
+      padding: 1.5rem;
+    }
+
+    .notification-switch {
+      &.ant-switch-checked {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  .notification-section {
+    .section-title {
+      color: var(--text-primary-color);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Dark mode styles
+.dark {
+  .notification-card {
+    background: var(--dark-background);
+    border-color: var(--dark-border);
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .ant-card-body {
+      color: var(--dark-text);
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .notification-settings {
+    .notification-card {
+      .ant-card-body {
+        padding: 1rem;
+      }
+    }
+  }
+}

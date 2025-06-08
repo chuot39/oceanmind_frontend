@@ -1,0 +1,76 @@
+.faculty-dashboard {
+  .faculty-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  .search-filter-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    .ant-input-search {
+      max-width: 360px;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+
+      .ant-input-search {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .ant-card {
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+    .ant-card-body {
+      padding: 16px;
+    }
+  }
+
+  .ant-btn-primary {
+    background-color: #1890ff;
+    border-color: #1890ff;
+
+    &:hover,
+    &:focus {
+      background-color: #40a9ff;
+      border-color: #40a9ff;
+    }
+  }
+
+  .ant-form-item-label > label {
+    font-weight: 500;
+  }
+
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+    text-align: center;
+
+    .empty-icon {
+      font-size: 48px;
+      color: #d9d9d9;
+      margin-bottom: 16px;
+    }
+
+    .empty-text {
+      color: rgba(0, 0, 0, 0.45);
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,217 @@
+.learn-exercise-page {
+  .stat-card {
+    .icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--background-primary-color);
+
+      &.text-blue {
+        color: #1890ff;
+        background-color: #e6f7ff;
+      }
+
+      &.text-green {
+        color: #52c41a;
+        background-color: #f6ffed;
+      }
+
+      &.text-purple {
+        color: #722ed1;
+        background-color: #f9f0ff;
+      }
+
+      &.text-cyan {
+        color: #13c2c2;
+        background-color: #e6fffb;
+      }
+    }
+
+    .text-secondary {
+      color: var(--secondary-color);
+    }
+  }
+
+  .project_exercise {
+    .project-card {
+      transition: all 0.3s ease;
+      height: 100%;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .ant-card-body {
+        padding: 20px;
+      }
+
+      .ant-card-actions {
+        background-color: var(--background-primary-color);
+        // border-top: 1px solid var(--color-divider);
+
+        li {
+          margin: 7px 0;
+
+          &:not(:last-child) {
+            border-right: 1px solid var(--color-divider);
+          }
+        }
+
+        button {
+          color: var(--text-primary-color);
+
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      .ant-tag {
+        border-radius: 4px;
+        padding: 2px 8px;
+        font-size: 12px;
+        border: none;
+
+        &.ant-tag-success {
+          background-color: #f6ffed;
+          color: #52c41a;
+        }
+
+        &.ant-tag-processing {
+          background-color: #e6f7ff;
+          color: #1890ff;
+        }
+
+        &.ant-tag-default {
+          background-color: #f5f5f5;
+          color: #666;
+        }
+      }
+
+      .ant-progress {
+        line-height: 1;
+
+        .ant-progress-bg {
+          height: 6px !important;
+        }
+      }
+
+      .text_secondary {
+        color: var(--secondary-color);
+      }
+
+      .line-clamp-2 {
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+
+    .project_list {
+      .ant-spin-container {
+        .ant-list-item {
+          background-color: var(--background-primary-color);
+        }
+      }
+
+      .ant-list-item-action {
+        background-color: var(--background-primary-color);
+        border-top: 1px solid var(--color-divider);
+        padding-top: 10px;
+        margin-left: 10px;
+
+        li {
+          margin: 7px 0;
+          .ant-btn {
+            border: 0.5px solid var(--tag-primary-border);
+            border-radius: 4px;
+          }
+
+          &:not(:last-child) {
+            border-right: 1px solid var(--color-divider);
+          }
+        }
+
+        button {
+          color: var(--tag-primary);
+          background-color: var(--tag-primary-bg);
+          &:hover {
+            color: var(--primary-color);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  // Drawer styles
+  .ant-drawer {
+    .ant-drawer-header {
+      border-bottom: 1px solid var(--color-divider);
+      background-color: var(--background-primary-color);
+      padding: 16px 24px;
+
+      .ant-drawer-title {
+        color: var(--text-primary-color);
+      }
+
+      .ant-drawer-close {
+        color: var(--text-primary-color);
+      }
+    }
+
+    .ant-drawer-body {
+      background-color: var(--background-primary-color);
+      padding: 24px;
+
+      .ant-form-item-label > label {
+        color: var(--text-primary-color);
+      }
+
+      .ant-input,
+      .ant-input-number,
+      .ant-picker,
+      .ant-select-selector {
+        background-color: var(--background-primary-color);
+        border-color: var(--color-divider);
+        color: var(--text-primary-color);
+
+        &:hover,
+        &:focus {
+          border-color: var(--primary-color);
+        }
+      }
+
+      .ant-select-selection-placeholder,
+      .ant-select-selection-item {
+        color: var(--text-primary-color);
+      }
+    }
+
+    .ant-drawer-footer {
+      border-top: 1px solid var(--color-divider);
+      padding: 16px 24px;
+      background-color: var(--background-primary-color);
+    }
+  }
+}
+
+.project-detail-drawer {
+  .custom_card {
+    padding: 0;
+    .ant-card-body {
+      padding: 16px 24px;
+      background-color: var(--bg-card-color);
+    }
+  }
+
+  .custom_list {
+    background-color: var(--bg-card-color);
+  }
+}

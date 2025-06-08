@@ -1,0 +1,31 @@
+.event-page {
+  .text-third {
+    color: var(--third-color);
+  }
+
+  .text-secondary {
+    color: var(--secondary-color);
+  }
+
+  .event-card {
+    background-color: var(--background-primary-color) !important;
+
+    .event-main-content {
+      color: var(--text-primary-color);
+    }
+  }
+
+  .ant-card-head-title {
+    color: var(--text-primary-color);
+  }
+
+  // .search-input {
+  //     .ant-input-affix-wrapper {
+  //         border-radius: 0.5rem;
+
+  //         &:focus, &:hover {
+  //             border-color: #7367f0;
+  //         }
+  //     }
+  // }
+}

@@ -1,0 +1,44 @@
+.update-container {
+  .ant-card {
+    border-radius: 12px;
+    // border: 1px solid #f0f0f0;
+    background-color: var(--background-primary-color);
+
+    .ant-card-body {
+      padding: 24px;
+    }
+  }
+
+  .update-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .update-card {
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      background: var(--background-hover-color);
+    }
+  }
+}

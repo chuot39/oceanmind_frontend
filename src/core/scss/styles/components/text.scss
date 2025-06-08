@@ -1,0 +1,58 @@
+.text_secondary {
+  color: var(--secondary-color) !important;
+}
+
+.text_first {
+  color: var(--text-primary-color) !important;
+}
+
+.text_third {
+  color: var(--third-color) !important;
+}
+
+.text_action {
+  color: var(--color-action) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease;
+  background: linear-gradient(
+    to right,
+    var(--color-action) 50%,
+    var(--color-action-hover) 50%
+  );
+  background-size: 200% 100%;
+  background-position: left bottom;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:hover {
+    font-weight: 400;
+    background-position: right bottom;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.email_report {
+  #email_extra {
+    color: var(--color-secondary) !important;
+    margin-top: 5px;
+    font-style: italic;
+  }
+}
+
+.text_danger {
+  color: var(--color-error) !important;
+  &:hover {
+    color: var(--color-error-hover) !important;
+  }
+}
+
+.text_warning {
+  color: var(--color-warning) !important;
+  &:hover {
+    color: var(--color-warning-hover) !important;
+  }
+}

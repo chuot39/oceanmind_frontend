@@ -1,0 +1,133 @@
+.card_sidebar {
+  background-color: var(--background-primary-color);
+  color: var(--text-primary-color);
+
+  .item_sidebar {
+    &:hover {
+      background-color: var(--btn-background-hover);
+      color: var(--btn-text-hover-color) !important;
+    }
+  }
+  .item_active {
+    color: var(--text-primary-color-active) !important;
+    background-color: var(--btn-background-hover);
+  }
+}
+
+.content_section {
+  background-color: var(--background-primary-color);
+  color: var(--text-primary-color);
+
+  .guide_collapse {
+    .ant-collapse-item {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #f0f0f0;
+      margin-bottom: 8px;
+
+      .ant-collapse-header {
+        padding: 16px 20px;
+        background-color: var(--btn-background-hover);
+        transition: all 0.3s ease;
+
+        svg {
+          color: var(--text-primary-color);
+        }
+      }
+
+      .ant-collapse-content {
+        border-top: 1px solid #f0f0f0;
+      }
+    }
+  }
+}
+
+// Custom animations for cards
+.discussion-card {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: #5b9bd5;
+    box-shadow: 0 10px 20px rgba(91, 155, 213, 0.1);
+  }
+}
+
+.card_search {
+  .ant-card-body {
+    background-image: url("../../../../../assets/images/background/support.png");
+    background-repeat: round;
+  }
+}
+
+.guide_card_search {
+  .ant-card-body {
+    background: var(--bg-card-support);
+  }
+}
+
+.btn_guide_show {
+  background: linear-gradient(45deg, #00a1af, #38e6f6);
+
+  &:hover {
+    background: linear-gradient(220deg, #00a1af, #38e6f6) !important;
+  }
+}
+
+// Message bubble styles
+.message-bubble {
+  position: relative;
+  background: var(--background-primary-color);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 15px;
+    height: 33px;
+    background: var(--background-primary-color);
+    transform: rotate(45deg);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+}
+
+.message-bubble-left {
+  &::after {
+    left: 0;
+    top: 29px;
+  }
+}
+
+.message-bubble-right {
+  &::after {
+    right: 7px;
+    top: 33px;
+    transform: rotate(153deg);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .navigation-menu {
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    flex-direction: column;
+
+    .support-image {
+      margin-top: 2rem;
+    }
+  }
+
+  .guide-modal {
+    .ant-modal-content {
+      margin: 1rem;
+    }
+  }
+}

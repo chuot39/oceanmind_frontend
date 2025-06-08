@@ -1,0 +1,14 @@
+.view-mode-toggle {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 2px double var(--border-color);
+  .ant-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      font-size: 1.2em;
+    }
+  }
+}

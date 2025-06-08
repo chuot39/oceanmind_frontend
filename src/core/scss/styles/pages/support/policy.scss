@@ -1,0 +1,53 @@
+.policy-container {
+  .ant-card {
+    background-color: var(--background-primary-color);
+    border-radius: 12px;
+
+    .ant-card-body {
+      padding: 24px;
+    }
+  }
+
+  .ant-collapse {
+    background: transparent;
+
+    .ant-collapse-item {
+      border: none;
+      margin-bottom: 16px;
+      background-color: var(--background-primary-color);
+      border-radius: 8px;
+      overflow: hidden;
+
+      .ant-collapse-header {
+        padding: 16px 24px;
+        background-color: var(--background-primary-color);
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--background-hover-color);
+        }
+      }
+
+      .ant-collapse-content {
+        background-color: var(--background-primary-color);
+        border-top: 1px solid var(--border-color);
+
+        .ant-collapse-content-box {
+          padding: 16px 24px;
+        }
+      }
+    }
+  }
+
+  .contact-info {
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--background-hover-color);
+    }
+  }
+}

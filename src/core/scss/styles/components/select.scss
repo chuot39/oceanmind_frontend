@@ -1,0 +1,105 @@
+.ant-select {
+  .ant-select-selector {
+    background-color: var(--background-primary-color) !important;
+    border-color: var(--color-divider) !important;
+    color: var(--text-primary-color) !important;
+
+    .ant-select-selection-placeholder {
+      color: var(--secondary-color) !important;
+    }
+  }
+
+  .ant-select-arrow {
+    color: var(--text-primary-color) !important;
+  }
+}
+
+.ant-select-dropdown {
+  background-color: var(--bg-dropdown-color) !important;
+  border: 1px solid var(--color-divider) !important;
+
+  // Style cho container của dropdown
+  .ant-select-dropdown-content {
+    background-color: var(--bg-dropdown-color) !important;
+  }
+
+  // Style cho từng item trong dropdown
+  .ant-select-item {
+    color: var(--text-primary-color);
+    background-color: var(--bg-dropdown-color) !important;
+
+    // Hover state
+    &:hover {
+      background-color: var(--bg-dropdown-selected-item) !important;
+    }
+
+    // Selected state
+    &-option-selected {
+      background-color: var(--bg-dropdown-selected-item) !important;
+      color: var(--text-primary-color);
+    }
+
+    // Active/focused state
+    &-option-active {
+      background-color: var(--bg-dropdown-selected-item) !important;
+    }
+  }
+
+  .ant-select-item-option-content {
+    color: var(--text-primary-color);
+  }
+
+  .ant-empty {
+    color: var(--third-color);
+  }
+}
+
+.ant-picker-suffix {
+  color: var(--text-primary-color) !important;
+}
+
+.anticon-close-circle {
+  color: var(--text-primary-color) !important;
+}
+
+.ant-picker-dropdown {
+  .ant-picker-date-panel-container {
+    background-color: var(--bg-dropdown-color) !important;
+    color: var(--text-primary-color) !important;
+
+    .ant-picker-header {
+      color: var(--text-primary-color) !important;
+
+      button {
+        color: var(--text-primary-color) !important;
+      }
+    }
+
+    .ant-picker-body {
+      .ant-picker-content {
+        th {
+          color: var(--text-primary-color) !important;
+        }
+        .ant-picker-cell {
+          color: var(--secondary-color) !important;
+        }
+        .ant-picker-cell-in-view {
+          color: var(--text-primary-color) !important;
+        }
+      }
+    }
+  }
+}
+
+.ant-form-item-control-input-content {
+  .ant-select-in-form-item {
+    .ant-select-selector {
+      cursor: pointer !important;
+    }
+    &.ant-select-disabled {
+      .ant-select-selector {
+        cursor: not-allowed !important;
+      }
+    }
+  }
+}

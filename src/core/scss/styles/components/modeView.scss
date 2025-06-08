@@ -1,0 +1,21 @@
+.mode_view {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 2px;
+  transition: all 0.3s ease;
+  &:hover {
+    border-color: var(--primary-color);
+  }
+
+  .ant-btn-icon-only {
+    color: var(--text-primary-color);
+    &:hover {
+      color: var(--switch-text-selected-hover) !important;
+    }
+
+    &.ant-btn-variant-solid {
+      background-color: var(--switch-bg-selected) !important;
+      color: var(--switch-text-selected) !important;
+    }
+  }
+}

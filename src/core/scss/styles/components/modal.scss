@@ -1,0 +1,43 @@
+.ant-modal {
+  color: var(--text-primary-color);
+
+  .ant-modal-content {
+    background-color: var(--background-primary-color);
+
+    .ant-modal-close {
+      color: var(--text-primary-color);
+    }
+
+    .ant-modal-header {
+      background-color: var(--background-primary-color);
+      .ant-modal-title {
+        color: var(--text-primary-color);
+      }
+    }
+
+    .ant-modal-body {
+      .ant-form {
+        .ant-form-item-label {
+          .ant-form-item-required {
+            color: var(--text-primary-color);
+          }
+        }
+
+        .ant-form-item-control {
+          .ant-radio-wrapper {
+            color: var(--text-primary-color);
+          }
+        }
+
+        .ant-form-item-row {
+          label {
+            color: var(--text-primary-color);
+          }
+        }
+      }
+    }
+  }
+  .ant-modal-footer {
+    background-color: var(--background-primary-color);
+  }
+}

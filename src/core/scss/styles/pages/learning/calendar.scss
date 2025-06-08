@@ -1,0 +1,156 @@
+.calendar-dashboard {
+  .ant-card-body {
+    height: calc(100vh - 180px);
+    padding: 1rem;
+  }
+
+  // Calendar Header
+  .calendar-header {
+    .add-event-btn {
+      min-width: 120px;
+    }
+
+    .calendar-view-switch {
+      .ant-radio-button-wrapper {
+        &:hover {
+          color: var(--primary-color);
+        }
+
+        &.ant-radio-button-wrapper-checked {
+          background-color: var(--primary-color);
+          border-color: var(--primary-color);
+          color: white;
+        }
+      }
+    }
+  }
+
+  // Calendar Sidebar
+  .calendar-sidebar {
+    .mini-calendar {
+      .ant-picker-calendar {
+        background-color: var(--background-primary-color);
+        border-radius: 8px;
+
+        .ant-picker-cell {
+          &:hover {
+            background-color: var(--bg-list-notice-hover);
+          }
+
+          &.ant-picker-cell-selected {
+            .ant-picker-cell-inner {
+              background-color: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+
+    .event-filters {
+      .filter-checkbox {
+        .ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: currentColor;
+            border-color: currentColor;
+          }
+        }
+
+        &:hover {
+          .ant-checkbox-inner {
+            border-color: currentColor;
+          }
+        }
+      }
+    }
+  }
+
+  // Calendar View
+  .calendar-view {
+    .ant-picker-calendar {
+      background-color: var(--background-primary-color);
+      border-radius: 8px;
+
+      .ant-picker-cell {
+        &:hover {
+          background-color: var(--bg-list-notice-hover);
+        }
+
+        .events {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          max-height: 80px;
+          overflow-y: auto;
+
+          li {
+            padding: 2px 4px;
+            border-radius: 4px;
+            margin-bottom: 2px;
+            font-size: 0.875rem;
+            cursor: pointer;
+
+            &:hover {
+              background-color: var(--bg-list-notice-hover);
+            }
+
+            .event-badge {
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+
+          .more-events {
+            color: var(--secondary-color);
+            text-align: center;
+            font-size: 0.75rem;
+          }
+
+          &::-webkit-scrollbar {
+            width: 4px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: var(--webkit-scrollbar-track);
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: var(--webkit-scrollbar-thumb);
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Event Drawer
+.event-drawer {
+  .ant-drawer-header {
+    border-bottom: 1px solid var(--color-divider);
+  }
+
+  .ant-drawer-body {
+    padding: 1rem;
+  }
+
+  .ant-form-item-label {
+    label {
+      color: var(--text-primary-color);
+    }
+  }
+
+  .ant-input,
+  .ant-select-selector,
+  .ant-picker {
+    background-color: var(--background-primary-color);
+    border-color: var(--color-divider);
+    color: var(--text-primary-color);
+
+    &:hover,
+    &:focus {
+      border-color: var(--primary-color);
+    }
+  }
+}

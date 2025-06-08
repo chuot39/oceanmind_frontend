@@ -1,0 +1,106 @@
+[data-theme="dark"] {
+  --background-color: #293046;
+  --text-primary-color: #e4e6eb;
+  --text-primary-color-active: #06aed8;
+  --third-color: #6f94bbe5;
+  --secondary-color: #9bb2ca;
+  --icon-color: #ffdcdc;
+  --border-color: #596480dc;
+  --navbar-color: #1a1a1a;
+  --login-image: #25293c;
+  --login-input: #2f3349;
+  --table-header-bg: #41445a;
+
+  --bg-app-content: #151d31;
+  --bg-item-selected: #094ba191;
+  --bg-list-notice-hover: #172554;
+  --bg-chat-message: #6379ab;
+  --bg-message-sent: #4397f1;
+  --bg-message-received: #51677ec7;
+
+  --text-message: #ffffff;
+  --text-message-time: rgba(255, 255, 255, 0.75);
+
+  --webkit-scrollbar-track: #394052;
+  --webkit-scrollbar-thumb: #a7abb2;
+  --list_notice-scrollbar-track: #39405234;
+  --list_notice-scrollbar-thumb: #a7abb2;
+
+  --btn-bg-color: #1f2a49b4;
+  --btn-background-hover: #334374b4;
+  --btn-text-hover-color: #ffffff;
+  --btn-custom-accept: #4397f1;
+  --btn-custom-reject: #f17a7a;
+  --btn-custom-accept-hover: #007bff;
+  --btn-custom-reject-hover: #ee5959;
+  --btn-custom-secondary: #51677ec7;
+  --btn-custom-secondary-hover: #5e85af;
+
+  --search-input-bg: #2f3349;
+  --search-input-border: #596480dc;
+  --search-input-text: #e4e6eb;
+
+  --switch-text-selected: #ffffff;
+  --switch-text-selected-hover: #e0e0e0;
+  --switch-bg-selected: #4096ff;
+  --switch-bg-selected-hover: #3075d3;
+
+  --input-bg: #394481b4;
+  --input-border: #596480dc;
+  --input-bg-focus: #41486de0;
+
+  --tag-primary: #88edff;
+  --tag-primary-bg: #46689e94;
+  --tag-primary-border: #1d39c4;
+
+  --tag-success: #7ef62d;
+  --tag-success-bg: #5c785464;
+  --tag-success-border: #237804;
+
+  --tag-warning: #ffc069;
+  --tag-warning-bg: #5f422170;
+  --tag-warning-border: #ad4e00;
+
+  --tag-error: #ff7573;
+  --tag-error-bg: #893d3d7e;
+  --tag-error-border: #820014;
+
+  --tag-info: #5cdbd3;
+  --tag-info-bg: #2f626b6e;
+  --tag-info-border: #006d75;
+
+  --tag-default: #bfbfbf;
+  --tag-default-bg: #1f1f1f;
+  --tag-default-border: #434343;
+
+  --tag-processing: #69c0ff;
+  --tag-processing-bg: #4c3d7954;
+  --tag-processing-border: #1d39c4;
+
+  --tag-purple: #d3adf7;
+  --tag-purple-bg: #4c3d7954;
+  --tag-purple-border: #1d39c4;
+
+  --color-divider: #95a0bddc;
+
+  --bg-dropdown-color: #3d486b;
+  --bg-dropdown-selected-item: #2b3881b4;
+
+  --bg-card-color: #0a0a4836;
+  --bg-icon-color: #d4dfff;
+
+  --bg-text-linear: linear-gradient(
+    94deg,
+    #beedff,
+    #d7bdfff0,
+    #7fffe6,
+    #02fbc5
+  );
+  --bg-header-navbar-shadow: linear-gradient(
+    180deg,
+    rgba(22, 29, 49, 0.9) 44%,
+    rgba(22, 29, 49, 0.43) 73%,
+    rgba(22, 29, 49, 0)
+  );
+  --bg-card-support: linear-gradient(20deg, #f4d5ff61, #0a7cff99);
+}

@@ -1,0 +1,72 @@
+.training-program-page {
+  color: var(--text-primary-color);
+  .text_title {
+    font-size: 27px;
+    // font-weight: 600;
+    color: var(--text-primary-color-active);
+  }
+
+  .ant-card-body {
+    padding: 1.5rem 0;
+  }
+
+  .ant-select {
+    .ant-select-selector {
+      border-radius: 6px;
+    }
+  }
+
+  .ant-input-search {
+    .ant-input {
+      border-radius: 6px;
+    }
+  }
+
+  .ant-pagination {
+    .ant-pagination-total-text {
+      margin-right: 1rem;
+    }
+  }
+}
+.filter_drawer {
+  background-color: var(--background-primary-color) !important;
+  color: var(--text-primary-color) !important;
+
+  .ant-drawer-close {
+    color: var(--text-primary-color) !important;
+  }
+
+  .ant-drawer-body {
+    .ant-form-item-label label {
+      color: var(--text-primary-color) !important;
+    }
+
+    .ant-select-selection-item-remove {
+      color: var(--text-primary-color) !important;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .training-program-page {
+    .header-actions {
+      flex-direction: column;
+      gap: 1rem;
+
+      .ant-select {
+        width: 100%;
+      }
+
+      .search-actions {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .ant-input-search {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

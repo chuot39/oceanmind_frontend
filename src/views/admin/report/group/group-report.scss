@@ -1,0 +1,145 @@
+// Group report dashboard styles
+.group-report-dashboard {
+  .ant-card {
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+    .ant-card-body {
+      padding: 16px;
+    }
+  }
+
+  .filter-tags-container {
+    .ant-tag {
+      padding: 4px 8px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+
+      .anticon {
+        margin-left: 6px;
+      }
+    }
+
+    .clear-all-btn {
+      margin-left: 8px;
+    }
+  }
+
+  // .custom-report-table {
+  //   .ant-table {
+  //     border-radius: 8px;
+  //     overflow: hidden;
+
+  //     .ant-table-thead > tr > th {
+  //       background-color: #f5f7fa;
+  //       font-weight: 600;
+  //     }
+
+  //     .ant-table-row:hover {
+  //       cursor: pointer;
+  //     }
+  //   }
+
+  //   .ant-table-pagination {
+  //     margin: 16px 0;
+  //   }
+  // }
+
+  // Stats cards
+  .ant-statistic {
+    .ant-statistic-title {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    .ant-statistic-content {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+
+  // Form styles
+  .ant-form-item-label > label {
+    font-weight: 500;
+  }
+
+  // Drawer styles
+  .ant-drawer-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f0f0f0;
+
+    .ant-drawer-title {
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+
+  .ant-drawer-body {
+    padding: 24px;
+  }
+
+  .ant-drawer-footer {
+    border-top: 1px solid #f0f0f0;
+    padding: 16px 24px;
+  }
+
+  // Description list styles
+  .ant-descriptions-bordered {
+    .ant-descriptions-item-label {
+      background-color: #f5f7fa;
+      font-weight: 500;
+    }
+  }
+
+  // Button styles
+  .ant-btn-primary {
+    background-color: #1890ff;
+    border-color: #1890ff;
+
+    &:hover,
+    &:focus {
+      background-color: #40a9ff;
+      border-color: #40a9ff;
+    }
+  }
+
+  // Modal styles
+  .action-modal {
+    .ant-modal-header {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 16px 24px;
+    }
+
+    .ant-modal-footer {
+      border-top: 1px solid #f0f0f0;
+      padding: 10px 16px;
+    }
+  }
+
+  // Status tags
+  .status-tag {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .ant-table {
+      .ant-table-content {
+        overflow-x: auto;
+      }
+    }
+
+    .filter-actions {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .ant-btn {
+        margin-top: 8px;
+      }
+    }
+  }
+}

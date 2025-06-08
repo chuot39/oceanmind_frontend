@@ -1,0 +1,62 @@
+.tag-primary {
+  color: var(--tag-primary-text);
+  background: var(--tag-primary-background);
+  border-color: var(--tag-primary-border);
+}
+
+.tag-success {
+  color: var(--tag-success-text);
+  background: var(--tag-success-background);
+  border-color: var(--tag-success-border);
+}
+
+.tag-warning {
+  color: var(--tag-warning-text);
+  background: var(--tag-warning-background);
+  border-color: var(--tag-warning-border);
+}
+
+.tag-error {
+  color: var(--tag-error-text);
+  background: var(--tag-error-background);
+  border-color: var(--tag-error-border);
+}
+
+.tag-info {
+  color: var(--tag-info-text);
+  background: var(--tag-info-background);
+  border-color: var(--tag-info-border);
+}
+
+.tag-info-hover {
+  &:hover {
+    color: var(--tag-info-text-hover) !important;
+    background: var(--tag-info-background) !important;
+    border-color: var(--tag-info-text-hover) !important;
+  }
+}
+
+.tag-default {
+  color: var(--tag-default-text);
+  background: var(--tag-default-background);
+  border-color: var(--tag-default-border);
+}
+
+.tag-processing {
+  color: var(--tag-processing-text);
+  background: var(--tag-processing-background);
+  border-color: var(--tag-processing-border);
+}
+
+.tag-purple {
+  color: var(--tag-purple-text);
+  background: var(--tag-purple-background);
+  border-color: var(--tag-purple-border);
+}
+
+.tag-purple-hover {
+  &:hover {
+    color: var(--tag-purple-text-hover) !important;
+    border-color: var(--tag-purple-text-hover) !important;
+  }
+}
